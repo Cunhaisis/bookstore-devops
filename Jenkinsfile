@@ -14,19 +14,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'npm test'
+                sh 'npm test'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'echo Build concluido com sucesso'
+                sh 'echo "Build concluido com sucesso"'
             }
         }
     }
