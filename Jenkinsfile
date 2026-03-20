@@ -6,27 +6,31 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('1 - Checkout Code') {
             steps {
+                echo 'Clonando repositório...'
                 git branch: 'main', url: 'https://github.com/Cunhaisis/bookstore-devops.git'
             }
         }
 
-        stage('Install Dependencies') {
+        stage('2 - Install Dependencies') {
             steps {
+                echo 'Instalando dependências...'
                 sh 'npm install'
             }
         }
 
-        stage('Test') {
+        stage('3 - Run Tests') {
             steps {
+                echo 'Executando testes...'
                 sh 'npm test'
             }
         }
 
-        stage('Build') {
+        stage('4 - Build Application') {
             steps {
-                sh 'echo "Build concluido com sucesso"'
+                echo 'Realizando build da aplicação...'
+                sh 'echo "Build concluído com sucesso"'
             }
         }
     }
