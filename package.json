@@ -1,0 +1,17 @@
+{
+  "name": "bookstore-devops",
+  "version": "1.0.0",
+  "description": "Loja de livros para atividade de CI/CD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  }
+}
